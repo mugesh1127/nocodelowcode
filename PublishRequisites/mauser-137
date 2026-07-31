@@ -1,0 +1,92 @@
+server {
+				listen       80;
+				server_name  mauser-137.mahat.ai;
+				location /BuildTrackTaskManagementSystem137/BuildTrackTaskManagementSystem137WebApi/{
+									proxy_pass "http://localhost:28158/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /BuildTrackTaskManagementSystem137/Admin/{
+									proxy_pass "http://localhost:28156/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /CollegeAttendanceApplication137/CollegeAttendanceApplication137WebApi/{
+									proxy_pass "http://localhost:28842/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /CollegeAttendanceApplication137/Admin/{
+									proxy_pass "http://localhost:28840/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /ProductCatalogueManagementPlatform137/ProductCatalogueManagementPlatform137WebApi/{
+									proxy_pass "http://localhost:29358/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /ProductCatalogueManagementPlatform137/Admin/{
+									proxy_pass "http://localhost:29356/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /FitnessCenterOperationsBillingApp/FitnessCenterOperationsBillingAppWebApi/{
+									proxy_pass "http://localhost:29638/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /FitnessCenterOperationsBillingApp/Admin/{
+									proxy_pass "http://localhost:29636/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /InternalMarksCGPACalculatorApp/InternalMarksCGPACalculatorAppWebApi/{
+									proxy_pass "http://localhost:30110/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+location /InternalMarksCGPACalculatorApp/Admin/{
+									proxy_pass "http://localhost:30108/";
+									proxy_http_version 1.1;
+									proxy_set_header Upgrade $http_upgrade;
+									proxy_set_header Connection keep-alive;
+									proxy_set_header Host $http_host;
+									proxy_cache_bypass $http_upgrade;                                    
+									}
+
+
+					listen 443 ssl; # managed by Certbot
+ ssl_certificate /etc/letsencrypt/live/mahat.ai/fullchain.pem; # managed by Certbot
+
+ ssl_certificate_key /etc/letsencrypt/live/mahat.ai/privkey.pem; # managed by Certbot
+ include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+ ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+				}
